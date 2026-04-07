@@ -39,7 +39,7 @@ export function PrivacyFAQ() {
       <div>
         <h2 className="text-xl font-mono text-white font-bold mb-6">Session Isolation & Privacy</h2>
         <p className="text-gray-400 font-mono text-sm max-w-2xl leading-relaxed">
-          <span className="text-gray-500">[*]</span> Each user prompt creates a new timestamped {".brain/"} directory locally. NodeMind processes your tasks in strictly isolated environments without polluting semantic search indices. Read docs on <Link href="https://github.com/gummybearansh/NodeMind#readme" className="underline underline-offset-4 text-white hover:text-gray-300">file isolation</Link>.
+          <span className="text-gray-500">[*]</span> Each user prompt creates a new timestamped {".brain/"} directory locally. NodeMind processes your tasks in strictly isolated environments without polluting semantic search indices. Read docs on <Link href="https://github.com/Ayush-1271/NoteMind/blob/main/FILE_ISOLATION.md" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 text-white hover:text-gray-300">file isolation</Link>.
         </p>
       </div>
 
