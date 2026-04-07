@@ -17,7 +17,8 @@ pip install --no-cache-dir "git+https://github.com/KunalMuk2205/NodeMind.git@fea
 nodemind setup
 nodemind start`,
   curl: "curl -fsSL https://nodemind.dev/install | bash",
-  npm: "npm install -g nodemind",
+  npm: `npm install -g @ayush1271/nodemind
+nodemind`,
   bun: "bun add -g nodemind",
   brew: "brew install nodemind",
   paru: "paru -S nodemind",
@@ -33,7 +34,7 @@ export function InstallTabs() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const tabs: Tab[] = ["pip", "curl", "npm", "bun", "brew", "paru"];
+  const tabs: Tab[] = ["pip", "npm", "curl", "bun", "brew", "paru"];
 
   return (
     <div className="w-full max-w-4xl border border-white/10 rounded-lg bg-[#0E0E0E] mt-8 mb-16 overflow-hidden">
