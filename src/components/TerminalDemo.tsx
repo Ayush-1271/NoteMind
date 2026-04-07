@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export function TerminalDemo() {
   const [typedCommand, setTypedCommand] = useState("");
-  const commandToType = "add a new field for signups that validates that they are 18 years old";
+  const commandToType = "Add a vector database memory layer to the agent using ChromaDB";
   
   useEffect(() => {
     let i = 0;
@@ -23,28 +23,27 @@ export function TerminalDemo() {
         
         {/* Step 1 */}
         <div className="space-y-2">
-          <p className="text-gray-500"># Create migration for date_of_birth column</p>
-          <p className="text-gray-300">$ <span className="text-white">cd /workspace && php artisan make:migration add_date_of_birth_to_users_table</span></p>
-          <p className="text-[#B9E986]">INFO  Migration [database/migrations/2026...add_date_of_birth] created successfully.</p>
+          <p className="text-gray-500"># Install dependencies</p>
+          <p className="text-gray-300">$ <span className="text-white">pip install chromadb sentence-transformers</span></p>
+          <p className="text-[#B9E986]">INFO  Successfully installed chromadb-0.4.22 sentence-transformers-2.2.2</p>
         </div>
 
         {/* Diff View */}
         <div className="border border-white/10 rounded-sm overflow-hidden bg-[#0A0A0A]">
           <div className="bg-[#121212] px-4 py-2 border-b border-white/5 text-gray-500">
-            + Edit database/migrations/2026_04_07_add_date_of_birth.php
+            + Edit backend/memory/chroma_store.py
           </div>
           <div className="p-4 grid grid-cols-[auto_1fr] gap-4">
             <div className="text-right text-gray-600 select-none">
               11<br/>12<br/>13<br/>14<br/>15<br/>16
             </div>
             <div>
-              <span className="text-gray-500">public function up(): void</span><br/>
-              <span className="text-gray-500">{"{"}</span><br/>
-              <span className="text-gray-400">{"  Schema::table('users', function (Blueprint $table) {"}</span><br/>
-              <span className="bg-red-500/20 text-red-300 block -mx-2 px-2">{"    //"}</span><br/>
-              <span className="bg-green-500/20 text-green-300 block -mx-2 px-2">{"    $table->date('date_of_birth')->after('name');"}</span><br/>
-              <span className="text-gray-400">{"  });"}</span><br/>
-              <span className="text-gray-500">{"}"}</span>
+              <span className="text-gray-500">class VectorMemory:</span><br/>
+              <span className="text-gray-500">{"    def __init__(self, persist_dir: str):"}</span><br/>
+              <span className="text-gray-400">{"        self.client = chromadb.PersistentClient(path=persist_dir)"}</span><br/>
+              <span className="bg-red-500/20 text-red-300 block -mx-2 px-2">{"        # self.collection = self.client.create_collection('memory')"}</span><br/>
+              <span className="bg-green-500/20 text-green-300 block -mx-2 px-2">{"        self.collection = self.client.get_or_create_collection('agent_memory')"}</span><br/>
+              <span className="text-gray-400">{"        self.emb_fn = embedding_functions.DefaultEmbeddingFunction()"}</span><br/>
             </div>
           </div>
         </div>
@@ -53,10 +52,10 @@ export function TerminalDemo() {
         <div className="pt-8 border-t border-white/5">
           <div className="text-gray-400 flex flex-col gap-1">
             <span className="text-[#888] mb-2">{typedCommand}</span>
-            <div className="text-gray-600">davidhill</div>
+            <div className="text-gray-600">developer</div>
           </div>
           <div className="mt-6 text-gray-300 flex items-center gap-2">
-            <div className="w-2 h-4 bg-white animate-pulse" /> I'll help you add an age verification field...
+            <div className="w-2 h-4 bg-white animate-pulse" /> I'll help you integrate ChromaDB vector storage...
           </div>
         </div>
       </div>
@@ -67,18 +66,18 @@ export function TerminalDemo() {
         <div>
           <h3 className="text-gray-500 mb-2 uppercase">LSP</h3>
           <ul className="text-gray-400 space-y-1">
-            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-green-500" /> php intelephense</li>
-            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-green-500" /> typescript</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-green-500" /> python pyright</li>
+            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-green-500" /> ruff</li>
           </ul>
         </div>
         
         <div>
           <h3 className="text-gray-500 mb-2 uppercase">Todo</h3>
           <ul className="text-gray-400 space-y-1.5">
-            <li className="text-white">[x] Create migration</li>
-            <li>[ ] Update User model with fillable</li>
-            <li>[ ] Add 18+ validation to CreateNewUser</li>
-            <li>[ ] Update registration form</li>
+            <li className="text-white">[x] Install ChromaDB</li>
+            <li>[ ] Initialize VectorMemory class</li>
+            <li>[ ] Connect to Agent execution loop</li>
+            <li>[ ] Add semantic search endpoint</li>
           </ul>
         </div>
 
