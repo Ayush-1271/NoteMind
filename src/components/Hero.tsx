@@ -9,13 +9,13 @@ export function Hero() {
       </div>
 
       <h1 className="text-5xl md:text-6xl font-mono font-bold tracking-tight text-white mb-6 max-w-3xl leading-[1.1]">
-        The open-source AI dev agent for your entire codebase
+        Graph Memory for Multi-Agent AI Systems
       </h1>
 
       <p className="text-lg font-mono text-gray-400 max-w-2xl leading-relaxed">
-        Understand your project structure, execute tasks, and build faster
+        Replace the linear context window with a persistent, semantic knowledge graph —
         <br />
-        directly from your terminal.
+        shared across every agent in your swarm.
       </p>
     </section>
   );

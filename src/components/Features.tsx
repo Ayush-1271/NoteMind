@@ -2,19 +2,19 @@
 
 export function Features() {
   const features = [
-    { title: "[*] Total Codebase Awareness", description: "NodeMind uses ChromaDB to embed and understand your entire project structure automatically." },
-    { title: "[*] Continuous Memory", description: "Long-term execution memory ensures context isn't lost between multiple agent sessions." },
-    { title: "[*] Multi-Agent Architecture", description: "Spawns specialized agents to handle debugging, refactoring, and generation simultaneously." },
-    { title: "[*] Terminal Native", description: "Built fully as a lightning-fast CLI tool so you never have to leave your keyboard." },
-    { title: "[*] Bring Your Own Model", description: "Connect to Google Gemini, OpenAI, Claude, or local open-source models effortlessly." },
-    { title: "[*] Framework Agnostic", description: "Works identically well on Python, Node, Next.js, Go, or any codebase you throw at it." }
+    { title: "[*] Graph Memory", description: "Every agent output is atomized into individual Markdown notes stored locally in .brain/." },
+    { title: "[*] Semantic Linking", description: "Notes are embedded into ChromaDB via vector similarity, replacing massive context dumps." },
+    { title: "[*] Bound Token Costs", description: "Token costs stay fixed. Agents navigate the graph, ensuring token usage scales at O(k) not O(n²)." },
+    { title: "[*] Collaborative Visibility", description: "Agents are no longer black boxes. Every decision is a node in the graph, visible to everyone." },
+    { title: "[*] Real-Time React Flow", description: "Real-time visualizer mapping the entire agent pipeline in strict swimlane columns." },
+    { title: "[*] WebSocket Pipeline", description: "FastAPI backend streams node additions and semantic edge links instantly to the frontend." }
   ];
 
   return (
     <section className="w-full max-w-4xl py-24 border-b border-white/5">
       <h2 className="text-xl font-mono text-white font-bold mb-8">What is NodeMind?</h2>
       <p className="text-gray-400 font-mono text-sm mb-12 max-w-2xl leading-relaxed">
-        NodeMind is an AI-powered developer agent that understands your project structure, executes complex architectural tasks, and helps you build faster directly from your terminal.
+        NodeMind replaces the flat, repeating context dump with a persistent knowledge graph, solving the Black Box problem and Token Explosion problem inherent to multi-agent frameworks.
       </p>
 
       <ul className="space-y-8 font-mono text-sm text-gray-400 max-w-3xl">
