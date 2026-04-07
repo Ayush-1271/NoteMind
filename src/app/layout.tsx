@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,15 +8,15 @@ const inter = Inter({
   display: "swap",
 });
 
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "NodeMind | The Real-Time Multi-Agent Execution Engine",
-  description: "A transparent execution loop powered by local markdown memory and live web sockets.",
+  title: "NodeMind | The open source AI coding agent",
+  description: "Run AI workflows across your codebase from terminal, IDE, or desktop.",
 };
 
 export default function RootLayout({
@@ -26,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={`${inter.variable} ${robotoMono.variable} antialiased bg-background text-foreground`}
-      >
+      <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-[#0A0A0A] text-gray-300 font-sans selection:bg-white/10 selection:text-white min-h-screen flex flex-col`}>
         {children}
       </body>
     </html>
