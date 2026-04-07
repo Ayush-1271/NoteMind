@@ -1,0 +1,2 @@
+[console_scripts]
+nodemind = backend.cli:main
