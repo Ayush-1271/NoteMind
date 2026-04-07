@@ -241,9 +241,9 @@ Open `http://localhost:3000` in your browser.
 
 ---
 
-## Installation via pip *(coming soon)*
+## Installation
 
-NodeMind will be available as a pip-installable package. Once released:
+NodeMind is available as a pip-installable package.
 
 ```bash
 pip install nodemind
@@ -251,22 +251,6 @@ nodemind start
 ```
 
 No clone required. The visualizer frontend will be bundled and served automatically.
-
----
-
-## Installation via curl *(coming soon)*
-
-One-line setup script for macOS/Linux:
-
-```bash
-curl -sSL https://nodemind.dev/install.sh | bash
-```
-
-This will:
-1. Check Python and Node.js requirements
-2. Install the `nodemind` CLI globally
-3. Walk you through `.env` configuration
-4. Launch the daemon and open the visualizer
 
 ---
 

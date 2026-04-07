@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nodemind"
+version = "0.1.0"
+authors = [
+  { name="NodeMind Contributors", email="hello@nodemind.dev" },
+]
+description = "The open-source AI dev agent with graph memory"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "motor",
+    "chromadb",
+    "python-dotenv",
+    "watchdog",
+    "textual",
+    "google-genai",
+]
+
+[project.scripts]
+nodemind = "backend.cli:main"
