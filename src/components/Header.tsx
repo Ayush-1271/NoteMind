@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Download } from "lucide-react";
+import { Github } from "lucide-react";
 
 export function Header() {
   return (
@@ -11,16 +11,13 @@ export function Header() {
       </Link>
       
       <div className="flex items-center gap-6 font-mono text-sm">
-        <Link href="https://github.com/gummybearansh/NodeMind" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
-          GitHub <span className="text-gray-500">[120K]</span>
+        <Link href="https://github.com/gummybearansh/NodeMind" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
+          <Github className="w-5 h-5" />
+          GitHub
         </Link>
-        <Link href="#" className="text-gray-300 hover:text-white transition-colors">Docs</Link>
-        <Link href="#" className="text-gray-300 hover:text-white transition-colors">CLI</Link>
-        <Link href="#" className="text-gray-300 hover:text-white transition-colors">Enterprise</Link>
-        <button className="flex items-center gap-2 border border-white/20 bg-white/5 hover:bg-white/10 text-white px-4 py-1.5 rounded-sm transition-colors">
-          <Download className="w-4 h-4" />
-          Free
-        </button>
+        <Link href="https://github.com/gummybearansh/NodeMind#readme" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+          Docs
+        </Link>
       </div>
     </header>
   );
