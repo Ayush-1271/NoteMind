@@ -60,28 +60,7 @@ export function TerminalDemo() {
         </div>
       </div>
 
-      {/* Right Pane - Sidebar */}
-      <div className="w-80 hidden lg:block border-l border-white/10 pl-8 pt-2 font-mono text-xs space-y-8 h-full min-h-[400px]">
-        
-        <div>
-          <h3 className="text-gray-500 mb-2 uppercase">LSP</h3>
-          <ul className="text-gray-400 space-y-1">
-            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-green-500" /> python pyright</li>
-            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-green-500" /> ruff</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 className="text-gray-500 mb-2 uppercase">Todo</h3>
-          <ul className="text-gray-400 space-y-1.5">
-            <li className="text-white">[x] Install ChromaDB</li>
-            <li>[ ] Initialize VectorMemory class</li>
-            <li>[ ] Connect to Agent execution loop</li>
-            <li>[ ] Add semantic search endpoint</li>
-          </ul>
-        </div>
 
-      </div>
     </div>
   );
 }
