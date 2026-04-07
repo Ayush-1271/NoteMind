@@ -32,9 +32,12 @@ export function Stats() {
         {/* Graph 3 */}
         <div className="flex flex-col items-center">
            <div className="w-full h-48 border-b border-white/10 relative flex items-end justify-between px-1 opacity-60 hover:opacity-100 transition-opacity">
-              {Array.from({length: 24}).map((_, i) => (
-                <div key={i} className="w-[1px] bg-white opacity-50" style={{ height: `${20 + Math.random() * 80}%` }} />
-              ))}
+              {Array.from({length: 24}).map((_, i) => {
+                const pseudoRandomAttr = Math.abs(Math.sin(i * 12345)) * 80;
+                return (
+                  <div key={i} className="w-[1px] bg-white opacity-50" style={{ height: `${20 + pseudoRandomAttr}%` }} />
+                );
+              })}
            </div>
            <p className="font-mono text-xs text-gray-400 mt-6 text-center">Semantic Context<br/><strong className="text-white">Improves Over Time</strong></p>
         </div>

@@ -21,7 +21,7 @@ export function LiveExecutionDemo() {
   const [lines, setLines] = useState<typeof logLines>([]);
   
   useEffect(() => {
-    let timers: NodeJS.Timeout[] = [];
+    const timers: NodeJS.Timeout[] = [];
     
     const runSimulation = () => {
       setLines([]);

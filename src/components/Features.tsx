@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 export function Features() {
   const features = [
@@ -26,9 +27,9 @@ export function Features() {
         ))}
       </ul>
 
-      <button className="mt-16 flex items-center gap-2 border border-white/20 bg-white text-black px-6 py-2 rounded-sm font-semibold hover:bg-gray-200 transition-colors">
+      <Link href="https://github.com/Ayush-1271/NoteMind#readme" target="_blank" rel="noopener noreferrer" className="mt-16 inline-flex items-center gap-2 border border-white/20 bg-white text-black px-6 py-2 rounded-sm font-semibold hover:bg-gray-200 transition-colors">
         Read docs <span className="text-lg leading-none">→</span>
-      </button>
+      </Link>
     </section>
   );
 }

@@ -1,0 +1,25 @@
+
+> landing-site@0.1.0 lint
+> eslint
+
+
+D:\Coding\Hackerthon\GEN AI\SECOND\Ayush1271_NoteMind\src\components\LiveExecutionDemo.tsx
+  24:9  error  'timers' is never reassigned. Use 'const' instead  prefer-const
+
+D:\Coding\Hackerthon\GEN AI\SECOND\Ayush1271_NoteMind\src\components\Stats.tsx
+  36:95  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+D:\Coding\Hackerthon\GEN AI\SECOND\Ayush1271_NoteMind\src\components\Stats.tsx:36:95
+  34 |            <div className="w-full h-48 border-b border-white/10 relative flex items-end justify-between px-1 opacity-60 hover:opacity-100 transition-opacity">
+  35 |               {Array.from({length: 24}).map((_, i) => (
+> 36 |                 <div key={i} className="w-[1px] bg-white opacity-50" style={{ height: `${20 + Math.random() * 80}%` }} />
+     |                                                                                               ^^^^^^^^^^^^^ Cannot call impure function
+  37 |               ))}
+  38 |            </div>
+  39 |            <p className="font-mono text-xs text-gray-400 mt-6 text-center">Semantic Context<br/><strong className="text-white">Improves Over Time</strong></p>  react-hooks/purity
+
+✖ 2 problems (2 errors, 0 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

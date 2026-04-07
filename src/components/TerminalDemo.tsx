@@ -55,7 +55,7 @@ export function TerminalDemo() {
             <div className="text-gray-600">developer</div>
           </div>
           <div className="mt-6 text-gray-300 flex items-center gap-2">
-            <div className="w-2 h-4 bg-white animate-pulse" /> I'll help you integrate ChromaDB vector storage...
+            <div className="w-2 h-4 bg-white animate-pulse" /> I&apos;ll help you integrate ChromaDB vector storage...
           </div>
         </div>
       </div>
