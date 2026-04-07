@@ -1,8 +1,0 @@
-fastapi
-uvicorn
-motor
-chromadb
-python-dotenv
-watchdog
-textual
-google-genai
