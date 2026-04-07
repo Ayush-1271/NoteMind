@@ -17,9 +17,9 @@ export function TerminalDemo() {
   }, []);
 
   return (
-    <div className="w-full border-t border-b border-white/10 bg-[#070707] py-12 flex items-start -mx-6 md:-mx-12 px-6 md:px-12 relative overflow-hidden">
+    <div className="w-full border-t border-b border-white/10 bg-[#070707] py-12 flex justify-center -mx-6 md:-mx-12 px-6 md:px-12 relative overflow-hidden">
       {/* Left Pane - Editor/Agent View */}
-      <div className="flex-1 max-w-4xl pr-8 font-mono text-xs md:text-sm text-gray-400 space-y-8">
+      <div className="w-full max-w-4xl font-mono text-xs md:text-sm text-gray-400 space-y-8">
         
         {/* Step 1 */}
         <div className="space-y-2">
