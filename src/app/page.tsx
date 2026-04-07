@@ -1,11 +1,27 @@
+import { Navbar } from "@/components/Navbar";
+import { HeroSection } from "@/components/HeroSection";
+import { InstallTerminal } from "@/components/InstallTerminal";
+import { ArchitectureSection } from "@/components/ArchitectureSection";
+import { FeaturesSection } from "@/components/FeaturesSection";
+import { LiveExecutionDemo } from "@/components/LiveExecutionDemo";
+import { ComparisonSection } from "@/components/ComparisonSection";
+import { Footer } from "@/components/Footer";
+
 export default function Home() {
   return (
-    <main style={{ padding: "40px", color: "white", background: "#0b0f19", height: "100vh" }}>
-      <h1>NodeMind</h1>
-      <p>landing page is working 🚀</p>
-      <pre style={{ marginTop: "20px" }}>
-        pip install nodemind
-      </pre>
+    <main className="min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white">
+      <Navbar />
+      
+      <div className="pt-16">
+        <HeroSection />
+        <InstallTerminal />
+        <ArchitectureSection />
+        <FeaturesSection />
+        <LiveExecutionDemo />
+        <ComparisonSection />
+      </div>
+
+      <Footer />
     </main>
   );
 }
