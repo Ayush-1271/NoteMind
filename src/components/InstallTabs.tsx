@@ -12,7 +12,6 @@ cd nodemind-test
 python -m venv testenv
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 .\\testenv\\Scripts\\Activate.ps1
-pip uninstall nodemind -y
 pip install --no-cache-dir "git+https://github.com/KunalMuk2205/NodeMind.git@feature/cli-onboarding-packaging"
 nodemind setup
 nodemind start`,
